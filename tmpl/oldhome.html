@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>home</title>
+		<link rel="stylesheet" type="text/css" media="all" href="public/css/bootstrap.css"/>	
+		<link rel="stylesheet" type="text/css" media="all" href="public/css/bootstrap-responsive.css"/>	
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="/">home</a></li>
+			<li><a href="/about">about</a></li>
+			<li><a href="/bikes">bikes</a></li>
+			<li><a href="/galleries">galleries</a></li>
+		</ul>
+	</head>
+	<body>
+		<h1>{{.Title |html}}</h1>
+		<h1>l'ecu carbon fiber labs</h1>
+
+		<p><a href="/edit/{{.Title |html}}">l'ecu</a></p>
+
+		<div>{{printf "%s" .Body |html}}</div>
+
+		<div id="footer">
+			<script type="text/javascript" src="public/js/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+			<!-- <script type="text/javascript" src="public/js/bootstrap.js"></script> -->
+		</div>
+	</body>
+<html>

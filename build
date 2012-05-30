@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm wzllr
+go build wzllr.go

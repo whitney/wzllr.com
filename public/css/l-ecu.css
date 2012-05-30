@@ -1,0 +1,39 @@
+body {
+	position: relative;
+	padding-top: 90px;
+	background-color: white;
+	/*background-image: url(../img/grid-18px-masked.png);*/
+	background-repeat: repeat-x;
+	background-position: 0 40px;
+}
+
+.navbar-fixed-top .brand {
+	padding-right: 0;
+	padding-left: 0;
+	/*margin-left: 20px;*/
+	/*float: right;*/
+	font-weight: bold;
+	color: black;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
+}
+
+.jumbotron {
+	position: relative;
+}
+
+.subhead h1 {
+	font-size: 54px;
+}
+
+.jumbotron h1 {
+	margin-bottom: 9px;
+	/*font-size: 81px;*/
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+}
+
+.subhead {
+	padding-bottom: 0;
+	margin-bottom: 9px;
+}

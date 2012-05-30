@@ -1,0 +1,8 @@
+My website.
+
+To build:
+$ rm wzllr
+$ go build wzllr.go
+
+To run:
+$ ./wzllr
