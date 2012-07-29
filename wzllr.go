@@ -165,15 +165,6 @@ func nestedViewHandler(w http.ResponseWriter, r *http.Request, title string) {
 }
 
 /*
-func editHandler(w http.ResponseWriter, r *http.Request, title string) {
-	p, err := loadPage(title)
-	if err != nil {
-		fmt.Printf("editHandler error: " + err.Error() + "\n")
-		p = &Page{Title: title}
-	}
-	renderTemplate(w, "edit", p)
-}
-
 func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 	body := r.FormValue("body")
 	p := &Page{Title: title, Body: []byte(body)}
