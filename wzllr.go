@@ -216,7 +216,7 @@ func main() {
 	http.HandleFunc("/public/", sourceHandler)
 	//http.HandleFunc("/", makeHandler(viewHandler))
 	http.HandleFunc("/", makeHandler(nestedViewHandler))
-	err := http.ListenAndServe(":8081", nil)
+	err := http.ListenAndServe(":80", nil)
     if err != nil {
        fmt.Printf("ListenAndServe Error: " + err.Error() + "\n")
     }
