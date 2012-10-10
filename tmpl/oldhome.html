@@ -1,27 +1,24 @@
 <html>
-	<head>
-		<title>home</title>
-		<link rel="stylesheet" type="text/css" media="all" href="public/css/bootstrap.css"/>	
-		<link rel="stylesheet" type="text/css" media="all" href="public/css/bootstrap-responsive.css"/>	
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="/">home</a></li>
-			<li><a href="/about">about</a></li>
-			<li><a href="/bikes">bikes</a></li>
-			<li><a href="/galleries">galleries</a></li>
-		</ul>
-	</head>
+	{{.HeadHTML}}
 	<body>
-		<h1>{{.Title |html}}</h1>
-		<h1>l'ecu carbon fiber labs</h1>
-
-		<p><a href="/edit/{{.Title |html}}">l'ecu</a></p>
-
-		<div>{{printf "%s" .Body |html}}</div>
-
-		<div id="footer">
-			<script type="text/javascript" src="public/js/jquery-1.7.1.min.js"></script>
-			<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
-			<!-- <script type="text/javascript" src="public/js/bootstrap.js"></script> -->
+		{{.NavHTML}}
+		<div class="container">
+			<header class="jumbotron subhead" id="intro">
+				<h1>L'Ecu Carbon Fiber Lab</h1>
+				<div id="myCarousel" class="carousel">
+  					<!-- Carousel items -->
+  					<div class="carousel-inner">
+    					<div class="active item"><img src="public/img/road0.jpg" alt></div>
+    					<div class="item"><img src="public/img/cyclocross0.jpg" alt></div>
+    					<div class="item"><img src="public/img/cyclocross1.jpg" alt></div>
+  					</div>
+  					<!-- Carousel nav -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				</div>
+				<div>Home lorem ipsum...</div>
+			</header>
 		</div>
+		{{.FooterHTML}}
 	</body>
 <html>

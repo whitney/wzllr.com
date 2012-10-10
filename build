@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm wzllr
+[ -f wzllr ] && rm wzllr
 go build wzllr.go

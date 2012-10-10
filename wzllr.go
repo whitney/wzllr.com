@@ -164,20 +164,6 @@ func nestedViewHandler(w http.ResponseWriter, r *http.Request, title string) {
 	renderNestedTemplate(w, title, p)
 }
 
-/*
-func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
-	body := r.FormValue("body")
-	p := &Page{Title: title, Body: []byte(body)}
-	err := p.save()
-	if err != nil {
-		fmt.Printf("saveHandler error: " + err.Error() + "\n")
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	http.Redirect(w, r, "/view/"+title, http.StatusFound)
-}
-*/
-
 const lenPath = len("/view/")
 
 var titleValidator = regexp.MustCompile("^[a-zA-Z0-9]+$")
@@ -208,6 +194,7 @@ func main() {
 	//http.HandleFunc("/", makeHandler(viewHandler))
 	http.HandleFunc("/", makeHandler(nestedViewHandler))
 	err := http.ListenAndServe(":80", nil)
+	//err := http.ListenAndServe(":8081", nil)
     if err != nil {
        fmt.Printf("ListenAndServe Error: " + err.Error() + "\n")
     }
