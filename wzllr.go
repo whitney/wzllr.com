@@ -107,7 +107,7 @@ func loadNestedPage(title string) (*NestedPage, error) {
 	return tPage, nil
 }
 
-var templates = template.Must(template.ParseFiles("tmpl/about.html", "tmpl/home.html"))
+var templates = template.Must(template.ParseFiles("tmpl/home.html", "tmpl/resume.html"))
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
 	err := templates.ExecuteTemplate(w, tmpl+".html", p)
