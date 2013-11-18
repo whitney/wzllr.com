@@ -1,8 +1,7 @@
 My website.
 
 To build:
-$ rm wzllr
-$ go build wzllr.go
+$ ./bin/build
 
 To run:
 $ ./wzllr
