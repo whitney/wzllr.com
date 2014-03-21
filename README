@@ -5,3 +5,25 @@ $ ./bin/build
 
 To run:
 $ ./wzllr
+
+################################
+# upstart: /etc/init/wzllr.conf#
+
+description "wzllr.com server"
+author "Whitney Zoller"
+
+start on (net-device-up
+        and local-filesystems
+        and runlevel [2345])
+
+stop on runlevel [06]
+respawn
+
+script
+        set -x
+        #change directory or go won't read the web app resources
+        export APP="/root/wzllr.com"
+        chdir $APP
+        ./wzllr
+
+end script
