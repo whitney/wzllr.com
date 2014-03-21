@@ -188,14 +188,12 @@ func sourceHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    fmt.Printf("Starting HTTP server, listening on port 8081...\n")
-	http.HandleFunc("/favicon.ico", sourceHandler)
-	http.HandleFunc("/public/", sourceHandler)
-	//http.HandleFunc("/", makeHandler(viewHandler))
-	http.HandleFunc("/", makeHandler(nestedViewHandler))
-	err := http.ListenAndServe(":80", nil)
-	//err := http.ListenAndServe(":8081", nil)
-    if err != nil {
-       fmt.Printf("ListenAndServe Error: " + err.Error() + "\n")
-    }
+  fmt.Printf("Starting HTTP server, listening on port 80...\n")
+  http.HandleFunc("/favicon.ico", sourceHandler)
+  http.HandleFunc("/public/", sourceHandler)
+  http.HandleFunc("/", makeHandler(nestedViewHandler))
+  err := http.ListenAndServe(":80", nil)
+  if err != nil {
+    fmt.Printf("ListenAndServe Error: " + err.Error() + "\n")
+  }
 }
